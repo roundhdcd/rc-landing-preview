@@ -20,7 +20,7 @@
   @keyframes glow{0%,100%{box-shadow:0 10px 26px -8px rgba(239,80,34,.45)}50%{box-shadow:0 16px 38px -6px rgba(239,80,34,.8)}}
   /* 세로 직사각형 카드 (원본 비율) */
   .ncard{transition:transform .25s ease, box-shadow .25s ease;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;min-height:256px;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(0,0,0,.35);}
-  .ncard:hover{transform:translateY(-8px);box-shadow:0 22px 44px -20px rgba(0,0,0,.5);}
+  .ncard:hover{transform:translateY(-12px) rotate(0deg) !important;box-shadow:0 22px 44px -20px rgba(0,0,0,.5);}
   .ncard .num{font-weight:900;font-size:38px;letter-spacing:-2px;line-height:1;opacity:.35;}
   .stat b{font-variant-numeric:tabular-nums;display:block;font-weight:900;letter-spacing:-2px;}
   ::selection{background:var(--ink);color:var(--lime);}
@@ -49,27 +49,27 @@
 
     <!-- 숫자 카운트업 (라임 영역 안) -->
     <div class="fade-up d5 flex flex-wrap justify-center" style="margin-top:48px;gap:clamp(28px,8vw,80px);">
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="98" data-suffix="%">0%</span></b><span style="color:#566020;font-size:14px;font-weight:600;">재계약률</span></div>
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="100" data-suffix="%">0%</span></b><span style="color:#566020;font-size:14px;font-weight:600;">결과 없으면 환불</span></div>
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)">월 단위</b><span style="color:#566020;font-size:14px;font-weight:600;">부담 없는 계약</span></div>
+      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="98" data-suffix="%">0%</span></b><span style="color:#3c4618;font-size:19px;font-weight:700;">재계약률</span></div>
+      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="100" data-suffix="%">0%</span></b><span style="color:#3c4618;font-size:19px;font-weight:700;">결과 없으면 환불</span></div>
+      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)">월 단위</b><span style="color:#3c4618;font-size:19px;font-weight:700;">부담 없는 계약</span></div>
     </div>
   </div>
 
   <!-- 직사각형 카드 4개 (이모티콘 제거, 기울기 제거) -->
-  <div class="grid fade-up d5" style="max-width:1040px;margin:clamp(44px,6vw,64px) auto 0;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
-    <a href="#services" class="ncard" style="background:var(--blue);">
+  <div class="grid fade-up d5" style="max-width:1040px;margin:clamp(44px,6vw,64px) auto clamp(40px,6vw,56px);gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start;">
+    <a href="#services" class="ncard" style="background:var(--blue);transform:rotate(-2deg) translateY(0);">
       <span class="num" style="color:#1c3a52">01</span>
       <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#15303f">서비스 소개</h3><p style="color:#3a5266;font-size:12.5px;margin-top:5px;">블로그·플레이스·숏폼</p></div>
     </a>
-    <a href="#cases" class="ncard" style="background:#fff;">
+    <a href="#cases" class="ncard" style="background:#fff;transform:rotate(1.6deg) translateY(28px);">
       <span class="num" style="color:#bbb">02</span>
       <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:var(--ink)">성공사례 후기</h3><p style="color:#888;font-size:12.5px;margin-top:5px;">매출 오른 사장님들</p></div>
     </a>
-    <a href="#knowhow" class="ncard" style="background:var(--blue);">
+    <a href="#knowhow" class="ncard" style="background:var(--blue);transform:rotate(-1.4deg) translateY(10px);">
       <span class="num" style="color:#1c3a52">03</span>
       <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#15303f">마케팅 노하우</h3><p style="color:#3a5266;font-size:12.5px;margin-top:5px;">상위노출·단골 만들기</p></div>
     </a>
-    <a href="#contact" class="ncard" style="background:var(--ink);">
+    <a href="#contact" class="ncard" style="background:var(--ink);transform:rotate(2.2deg) translateY(36px);">
       <span class="num" style="color:#666">04</span>
       <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#fff">컨설팅 문의하기</h3><p style="color:#bbb;font-size:12.5px;margin-top:5px;">맞춤 무료 상담</p></div>
     </a>
