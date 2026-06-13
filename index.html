@@ -15,11 +15,11 @@
   .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.4s}.d5{animation-delay:.52s}
   @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
   /* 눈에 띄는 CTA: 그라데이션 + 은은한 글로우 */
-  .cta{background:linear-gradient(90deg,#ff6a1a,#ff2d78);color:#fff;padding:17px 36px;border-radius:999px;font-weight:800;font-size:17px;display:inline-flex;align-items:center;gap:6px;transition:transform .2s;animation:glow 2.2s ease-in-out infinite;}
+  .cta{background:#ef5022;color:#fff;padding:17px 36px;border-radius:999px;font-weight:800;font-size:17px;display:inline-flex;align-items:center;gap:6px;transition:transform .2s;animation:glow 2.4s ease-in-out infinite;}
   .cta:hover{transform:translateY(-3px) scale(1.02);}
-  @keyframes glow{0%,100%{box-shadow:0 10px 26px -8px rgba(255,45,120,.5)}50%{box-shadow:0 16px 38px -6px rgba(255,45,120,.9)}}
-  /* 직사각형 카드 (기울기X, 균일) */
-  .ncard{transition:transform .25s ease, box-shadow .25s ease;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;min-height:200px;border-radius:18px;padding:24px;box-shadow:0 8px 24px -14px rgba(0,0,0,.35);}
+  @keyframes glow{0%,100%{box-shadow:0 10px 26px -8px rgba(239,80,34,.45)}50%{box-shadow:0 16px 38px -6px rgba(239,80,34,.8)}}
+  /* 세로 직사각형 카드 (원본 비율) */
+  .ncard{transition:transform .25s ease, box-shadow .25s ease;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;min-height:256px;border-radius:18px;padding:26px;box-shadow:0 8px 24px -14px rgba(0,0,0,.35);}
   .ncard:hover{transform:translateY(-8px);box-shadow:0 22px 44px -20px rgba(0,0,0,.5);}
   .ncard .num{font-weight:900;font-size:38px;letter-spacing:-2px;line-height:1;opacity:.35;}
   .stat b{font-variant-numeric:tabular-nums;display:block;font-weight:900;letter-spacing:-2px;}
@@ -39,7 +39,7 @@
 
   <div style="max-width:900px;margin:clamp(30px,5vw,58px) auto 0;text-align:center;">
     <p class="fade-up d1" style="font-weight:700;font-size:14px;color:#4a5a1e;margin-bottom:18px;">네이버 블로그 · 플레이스 · 숏폼 마케팅 대행</p>
-    <h1 class="hl fade-up d2" style="font-weight:900;font-size:clamp(40px,8.5vw,90px);color:var(--ink);">광고비 말고,<br><span style="background:linear-gradient(90deg,#ff6a1a,#ff2d78);-webkit-background-clip:text;background-clip:text;color:transparent;">매출</span>을 만듭니다.</h1>
+    <h1 class="hl fade-up d2" style="font-weight:900;font-size:clamp(40px,8.5vw,90px);color:var(--ink);">광고비 말고,<br><span style="color:#ef5022;">매출</span>을 만듭니다.</h1>
     <p class="fade-up d3" style="max-width:540px;margin:22px auto 0;font-size:clamp(15px,2.2vw,19px);line-height:1.6;color:#3c4420;">
       문의가 들어오는 마케팅 · 재계약률 98%, 결과 없으면 <b>100% 환불</b>.
     </p>
