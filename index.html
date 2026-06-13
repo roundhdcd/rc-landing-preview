@@ -7,71 +7,73 @@
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
-  :root{ --lime:#d7e84d; --ink:#17191f; --blue:#a7cde4; }
+  :root{ --bg:#f5f3ec; --ink:#191b1f; --muted:#73767d; --lime:#cfe53f; --line:#e6e2d6; }
   *{font-family:'Pretendard',sans-serif;box-sizing:border-box;}
-  body{margin:0;background:var(--lime);color:var(--ink);}
-  .hl{letter-spacing:-2.5px;line-height:1.08;}
-  .fade-up{opacity:0;transform:translateY(22px);animation:fadeUp .7s ease forwards;}
-  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.4s}.d5{animation-delay:.52s}
+  body{margin:0;background:var(--bg);color:var(--ink);}
+  .hl{letter-spacing:-3px;line-height:1.06;}
+  .fade-up{opacity:0;transform:translateY(20px);animation:fadeUp .7s ease forwards;}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}.d5{animation-delay:.5s}
   @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-  /* 눈에 띄는 CTA: 그라데이션 + 은은한 글로우 */
-  .cta{background:#2b95e0;color:#fff;padding:17px 36px;border-radius:999px;font-weight:800;font-size:17px;display:inline-flex;align-items:center;gap:6px;transition:transform .2s;animation:glow 2.4s ease-in-out infinite;}
-  .cta:hover{transform:translateY(-3px) scale(1.02);}
-  @keyframes glow{0%,100%{box-shadow:0 10px 26px -8px rgba(43,149,224,.45)}50%{box-shadow:0 16px 38px -6px rgba(43,149,224,.85)}}
-  /* 각진 직사각형 카드 */
-  .ncard{transition:transform .25s ease, box-shadow .25s ease;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;min-height:256px;border-radius:0;padding:26px;box-shadow:0 8px 24px -14px rgba(0,0,0,.35);}
-  .ncard:hover{transform:translateY(-12px) rotate(0deg) !important;box-shadow:0 22px 44px -20px rgba(0,0,0,.5);}
-  .ncard .num{font-weight:900;font-size:38px;letter-spacing:-2px;line-height:1;opacity:.35;}
+  .mark{background:linear-gradient(transparent 58%, var(--lime) 58%);padding:0 .05em;}
+  .cta{background:var(--ink);color:#fff;padding:17px 34px;border-radius:12px;font-weight:700;font-size:17px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,box-shadow .2s;}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(0,0,0,.4);}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;min-height:188px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .22s,box-shadow .22s,border-color .22s;cursor:pointer;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 38px -22px rgba(0,0,0,.32);border-color:#d8d3c4;}
+  .card .num{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:1px;}
   .stat b{font-variant-numeric:tabular-nums;display:block;font-weight:900;letter-spacing:-2px;}
-  ::selection{background:var(--ink);color:var(--lime);}
+  ::selection{background:var(--lime);color:var(--ink);}
 </style>
 </head>
 <body>
 
-<section style="padding:clamp(20px,3.5vw,44px) clamp(20px,4vw,48px) clamp(48px,7vw,84px);">
-  <header class="flex items-center justify-between fade-up d1" style="max-width:1120px;margin:0 auto;">
+<section style="max-width:1120px;margin:0 auto;padding:clamp(20px,3.5vw,40px) clamp(20px,5vw,40px) clamp(60px,9vw,110px);">
+  <header class="flex items-center justify-between fade-up d1">
     <div class="flex items-center gap-2">
-      <span class="inline-flex items-center justify-center rounded-full" style="width:32px;height:32px;background:var(--ink);color:var(--lime);font-weight:900;">R</span>
+      <span class="inline-flex items-center justify-center" style="width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--lime);font-weight:900;font-size:15px;">R</span>
       <span style="font-weight:800;letter-spacing:-.5px;">ROUND COMPANY</span>
     </div>
-    <a href="#contact" style="background:var(--ink);color:#fff;padding:9px 18px;font-weight:700;font-size:14px;border-radius:999px;">상담 문의</a>
+    <a href="#contact" style="border:1.5px solid var(--ink);color:var(--ink);padding:9px 18px;font-weight:700;font-size:14px;border-radius:10px;">상담 문의</a>
   </header>
 
-  <div style="max-width:900px;margin:clamp(30px,5vw,58px) auto 0;text-align:center;">
-    <p class="fade-up d1" style="font-weight:700;font-size:14px;color:#4a5a1e;margin-bottom:18px;">네이버 블로그 · 플레이스 · 숏폼 마케팅 대행</p>
-    <h1 class="hl fade-up d2" style="font-weight:900;font-size:clamp(40px,8.5vw,90px);color:var(--ink);">광고비 말고,<br><span style="color:#1f86d6;">매출</span>을 만듭니다.</h1>
-    <p class="fade-up d3" style="max-width:540px;margin:22px auto 0;font-size:clamp(15px,2.2vw,19px);line-height:1.6;color:#3c4420;">
-      문의가 들어오는 마케팅 · 재계약률 98%, 결과 없으면 <b>100% 환불</b>.
+  <div style="max-width:780px;margin:clamp(48px,9vw,104px) auto 0;text-align:center;">
+    <p class="fade-up d1" style="display:inline-block;font-weight:700;font-size:13.5px;color:var(--ink);background:var(--lime);padding:7px 15px;border-radius:999px;margin-bottom:26px;">네이버 블로그 · 플레이스 · 숏폼 마케팅 대행</p>
+    <h1 class="hl fade-up d2" style="font-weight:900;font-size:clamp(42px,8.5vw,88px);">광고비 말고,<br><span class="mark">매출</span>을 만듭니다.</h1>
+    <p class="fade-up d3" style="max-width:520px;margin:28px auto 0;font-size:clamp(16px,2.2vw,20px);line-height:1.65;color:var(--muted);">
+      문의가 들어오는 마케팅 · 재계약률 98%, 결과 없으면 <b style="color:var(--ink)">100% 환불</b>.
     </p>
-    <div class="fade-up d4" style="margin-top:30px;">
+    <div class="fade-up d4 flex flex-wrap items-center justify-center gap-4" style="margin-top:36px;">
       <a href="#analysis" class="cta">무료 마케팅 진단받기 →</a>
-    </div>
-
-    <!-- 숫자 카운트업 (라임 영역 안) -->
-    <div class="fade-up d5 flex flex-wrap justify-center" style="margin-top:48px;gap:clamp(28px,8vw,80px);">
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="98" data-suffix="%">0%</span></b><span style="color:#3c4618;font-size:19px;font-weight:700;">재계약률</span></div>
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)"><span data-target="100" data-suffix="%">0%</span></b><span style="color:#3c4618;font-size:19px;font-weight:700;">결과 없으면 환불</span></div>
-      <div class="stat"><b style="font-size:clamp(40px,7vw,62px);color:var(--ink)">월 단위</b><span style="color:#3c4618;font-size:19px;font-weight:700;">부담 없는 계약</span></div>
+      <a href="#contact" style="font-weight:700;color:var(--ink);border-bottom:2px solid var(--lime);padding-bottom:2px;">상담 문의하기</a>
     </div>
   </div>
 
-  <!-- 직사각형 카드 4개 (이모티콘 제거, 기울기 제거) -->
-  <div class="grid fade-up d5" style="max-width:1040px;margin:clamp(44px,6vw,64px) auto clamp(40px,6vw,56px);gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start;">
-    <a href="#services" class="ncard" style="background:var(--blue);transform:rotate(-2deg) translateY(0);">
-      <span class="num" style="color:#1c3a52">01</span>
-      <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#15303f">서비스 소개</h3><p style="color:#3a5266;font-size:12.5px;margin-top:5px;">블로그·플레이스·숏폼</p></div>
+  <!-- 숫자 카운트업 -->
+  <div class="fade-up d5 flex flex-wrap justify-center" style="margin-top:clamp(54px,8vw,84px);gap:clamp(28px,7vw,76px);">
+    <div class="stat" style="text-align:center;"><b style="font-size:clamp(44px,7vw,66px);">재계약률 <span data-target="98" data-suffix="%" style="color:#1f86d6">0%</span></b><span style="color:var(--muted);font-size:16px;font-weight:600;">계속 함께하는 이유</span></div>
+  </div>
+  <div class="fade-up d5 flex flex-wrap justify-center" style="margin-top:34px;gap:clamp(24px,6vw,64px);border-top:1px solid var(--line);padding-top:36px;max-width:840px;margin-left:auto;margin-right:auto;">
+    <div class="stat" style="text-align:center;"><b style="font-size:clamp(30px,5vw,42px);"><span data-target="100" data-suffix="%">0%</span></b><span style="color:var(--muted);font-size:15px;font-weight:600;">결과 없으면 환불</span></div>
+    <div class="stat" style="text-align:center;"><b style="font-size:clamp(30px,5vw,42px);">월 단위</b><span style="color:var(--muted);font-size:15px;font-weight:600;">부담 없는 계약</span></div>
+    <div class="stat" style="text-align:center;"><b style="font-size:clamp(30px,5vw,42px);">정직한</b><span style="color:var(--muted);font-size:15px;font-weight:600;">피드백 보장</span></div>
+  </div>
+
+  <!-- 카드 4개 (정돈, 라임 포인트) -->
+  <div class="grid" style="margin-top:clamp(56px,8vw,90px);gap:16px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));">
+    <a href="#services" class="card fade-up d2">
+      <span class="num">01</span>
+      <div><h3 style="font-weight:800;font-size:22px;letter-spacing:-1px;">서비스 소개</h3><p style="color:var(--muted);font-size:13.5px;margin-top:7px;line-height:1.5;">블로그·플레이스·숏폼 패키지</p></div>
     </a>
-    <a href="#cases" class="ncard" style="background:#fff;transform:rotate(1.6deg) translateY(28px);">
-      <span class="num" style="color:#bbb">02</span>
-      <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:var(--ink)">성공사례 후기</h3><p style="color:#888;font-size:12.5px;margin-top:5px;">매출 오른 사장님들</p></div>
+    <a href="#cases" class="card fade-up d3">
+      <span class="num">02</span>
+      <div><h3 style="font-weight:800;font-size:22px;letter-spacing:-1px;">성공사례 후기</h3><p style="color:var(--muted);font-size:13.5px;margin-top:7px;line-height:1.5;">매출이 오른 사장님들</p></div>
     </a>
-    <a href="#knowhow" class="ncard" style="background:var(--blue);transform:rotate(-1.4deg) translateY(10px);">
-      <span class="num" style="color:#1c3a52">03</span>
-      <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#15303f">마케팅 노하우</h3><p style="color:#3a5266;font-size:12.5px;margin-top:5px;">상위노출·단골 만들기</p></div>
+    <a href="#knowhow" class="card fade-up d4">
+      <span class="num">03</span>
+      <div><h3 style="font-weight:800;font-size:22px;letter-spacing:-1px;">마케팅 노하우</h3><p style="color:var(--muted);font-size:13.5px;margin-top:7px;line-height:1.5;">상위노출·단골 만들기</p></div>
     </a>
-    <a href="#contact" class="ncard" style="background:var(--ink);transform:rotate(2.2deg) translateY(36px);">
-      <span class="num" style="color:#666">04</span>
-      <div><h3 style="font-weight:800;font-size:21px;letter-spacing:-1px;color:#fff">컨설팅 문의하기</h3><p style="color:#bbb;font-size:12.5px;margin-top:5px;">맞춤 무료 상담</p></div>
+    <a href="#contact" class="card fade-up d5" style="background:var(--ink);border-color:var(--ink);">
+      <span class="num" style="color:#9a9da4;">04</span>
+      <div><h3 style="font-weight:800;font-size:22px;letter-spacing:-1px;color:#fff;">컨설팅 문의하기 <span style="color:var(--lime);">→</span></h3><p style="color:#b9bcc2;font-size:13.5px;margin-top:7px;line-height:1.5;">우리 매장 맞춤 무료 상담</p></div>
     </a>
   </div>
 </section>
